@@ -1,0 +1,29 @@
+[url "git@lab.weave.nl:"]
+	insteadof = https://lab.weave.nl
+[pull]
+	rebase = true
+[rebase]
+	autostash = true
+[user]
+	name = Mathieu Post
+	email = mathieupost@gmail.com
+[user "https://lab.weave.nl"]
+	name = Mathieu Post
+	email = mathieu@weave.nl
+[user "ssh://git@lab.weave.nl"]
+	name = Mathieu Post
+	email = mathieu@weave.nl
+[alias]
+	cm = !git add -A && git commit -m
+	wip = !git add -A && git commit -m "WIP"
+	save = commit -am "WIP"
+	undo = reset HEAD~1 --mixed
+	amend = commit -a --amend
+	wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+	bclean = "!f() { git checkout ${1-master} && git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
+	ac = commit -am 
+	fixup = "!f() { git commit --fixup ${1} && git rebase ${1}~1 -i --autosquash; }; f"
+[core]
+	autocrlf = input
+	excludefile = ~/.gitignore
+	hookspath = ~/.gittemplates/hooks
