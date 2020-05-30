@@ -10,4 +10,15 @@ end
 # Init fuck
 thefuck --alias | source
 
+# Golang
+set -Ux GOPATH ~/Dev
+set -Ux GOBIN ~/Dev/bin
+set -Ux GO111MODULE on
+set -Ux GOPROXY goproxy.weave.nl
+set -Ux GONOSUMDB lab.weave.nl
 
+# Set $PATH
+set -ga fish_user_paths ~/.emacs.d/bin $GOBIN /opt/asdf-vm/bin
+
+# Load asdf-vm
+eval (asdf exec direnv hook fish)
