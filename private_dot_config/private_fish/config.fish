@@ -10,8 +10,4 @@ end
 # Init fuck
 thefuck --alias | source
 
-# Init anaconda
-if not type --quiet "conda"
-      source /usr/local/anaconda3/etc/fish/conf.d/conda.fish
-end
 
