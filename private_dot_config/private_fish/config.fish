@@ -14,7 +14,7 @@ or which vim &> /dev/null && set -gx EDITOR vim
 or which vi &> /dev/null && set -gx EDITOR vi
 
 # Init fuck
-thefuck --alias | source
+which thefuck &> /dev/null && thefuck --alias | source
 
 # Golang
 set -Ux GOPATH ~/Dev
@@ -27,4 +27,4 @@ set -Ux GONOSUMDB lab.weave.nl
 set -ga fish_user_paths ~/.emacs.d/bin $GOBIN /opt/asdf-vm/bin
 
 # Load asdf-vm
-eval (asdf exec direnv hook fish)
+which asdf &> /dev/null && eval (asdf exec direnv hook fish)
