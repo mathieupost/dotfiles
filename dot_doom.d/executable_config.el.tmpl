@@ -101,6 +101,7 @@
 
            :unnarrowed t))))
 
+{{ if ne .chezmoi.os "android" -}}
 (use-package org-noter
   :after (:any org pdf-view)
   :config
@@ -130,6 +131,8 @@
                  :prepend t
                  :kill-buffer t))
   )
+
+{{ end -}}
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
