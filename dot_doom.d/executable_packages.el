@@ -48,4 +48,3 @@
 
 (package! org-ref)
 (package! org-roam-bibtex)
-(package! weechat)
