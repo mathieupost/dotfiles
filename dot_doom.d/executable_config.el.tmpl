@@ -118,6 +118,10 @@
 ;; Actually start using templates
 (after! org-capture
   ;; Firefox and Chrome
+  (defun transform-square-brackets-to-round-ones(string-to-transform)
+    ;; Transforms [ into ( and ] into ), other chars left unchanged.
+    (concat
+     (mapcar #'(lambda (c) (if (equal c ?[) ?\( (if (equal c ?]) ?\) c))) string-to-transform)))
   (add-to-list 'org-capture-templates
                '("P" "Protocol" entry ; key, name, type
                  (file+headline +org-capture-notes-file "Inbox") ; target
