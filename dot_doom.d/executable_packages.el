@@ -48,3 +48,6 @@
 
 (package! org-ref)
 (package! org-roam-bibtex)
+
+(package! chezmoi
+ :recipe (:host github :repo "tuh8888/chezmoi.el"))
