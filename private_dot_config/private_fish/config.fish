@@ -1,5 +1,10 @@
 # Fish config
 
+# Unlock bitwarden
+if not set -q BW_SESSION
+   set -xg BW_SESSION (bw unlock --raw)
+end
+
 # Install fisher if not installed
 if not functions -q fisher
     set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
