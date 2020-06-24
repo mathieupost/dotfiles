@@ -8,7 +8,7 @@ if not functions -q fisher
 end
 
 # Set preferred editor
-which emacsclient &> /dev/null && set -gx EDITOR "emacsclient -t -a=\"\""
+which emacsclient &> /dev/null && set -gx EDITOR emacsclient -t -a=\"\"
 or which nvim &> /dev/null && set -gx EDITOR nvim
 or which vim &> /dev/null && set -gx EDITOR vim
 or which vi &> /dev/null && set -gx EDITOR vi
