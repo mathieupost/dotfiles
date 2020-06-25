@@ -1,10 +1,5 @@
 # Fish config
 
-# Unlock bitwarden
-if not set -q BW_SESSION
-   set -xg BW_SESSION (bw unlock --raw)
-end
-
 {{- if eq .chezmoi.os "darwin" }}
 
 # Use gnu core utils instead of bsd
