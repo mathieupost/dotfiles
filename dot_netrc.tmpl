@@ -1,3 +1,7 @@
+machine vserver90.axc.eu
+login {{ (bitwarden "item" "versio.ftp").login.username }}
+password {{ (bitwarden "item" "versio.ftp").login.password }}
+
 machine lab.weave.nl
 login {{ (bitwarden "item" "lab.weave.nl").login.username }}
 password {{ (bitwarden "item" "lab.weave.nl").login.password }}
