@@ -1,3 +1,7 @@
+machine lab.weave.nl
+login {{ (bitwarden "item" "lab.weave.nl").login.username }}
+password {{ (bitwarden "item" "lab.weave.nl").login.password }}
+
 machine goproxy.weave.nl
 login {{ (bitwarden "item" "goproxy.weave.nl").login.username }}
 password {{ (bitwarden "item" "goproxy.weave.nl").login.password }}
