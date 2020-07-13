@@ -11,6 +11,7 @@
 [user "ssh://git@lab.weave.nl"]
     name = Mathieu Post
     email = mathieu@weave.nl
+
 [alias]
     cm = !git add -A && git commit -m
     wip = !git add -A && git commit -m "WIP"
@@ -24,8 +25,11 @@
     clean-custom = clean -xfd -e .idea
     clean-custom-dry = clean -xfdn -e .idea
     stash-staged = "!bash -c \"git stash --keep-index; git stash push -m \"staged\" --keep-index; git stash pop stash@{1}\""
+
 [core]
     autocrlf = input
     excludesfile = ~/.gitignore
     hookspath = ~/.gittemplates/hooks
 
+[merge]
+	conflictStyle = diff3
