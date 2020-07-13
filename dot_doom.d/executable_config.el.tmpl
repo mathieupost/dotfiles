@@ -46,6 +46,7 @@
   (lsp-ui-sideline--run))
 
 (add-hook! org-mode
+  (setq-default fill-column 80)
   (setq org-latex-logfiles-extensions
         (append org-latex-logfiles-extensions '("tex" "bib" "bbl"))))
 
