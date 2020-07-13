@@ -148,6 +148,9 @@
   (add-hook 'protobuf-mode-hook
             (lambda () (c-add-style "my-style" my-protobuf-style t))))
 
+(after! magit
+  (setq magit-diff-refine-hunk 'all))
+
 (after! treemacs
   (treemacs-git-mode 'extended)
   (add-to-list 'treemacs-pre-file-insert-predicates #'treemacs-is-file-git-ignored?))
